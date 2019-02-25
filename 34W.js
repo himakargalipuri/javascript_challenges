@@ -11,3 +11,4 @@ function printCurr()
 {
   return window.print();
 }
+//Expected OutPut is Printing the Current Screen
