@@ -3,7 +3,6 @@
 
 var input = 5;
 
-//Mention Comments at  each line saying what it does.
 const factorial = (input) => {
 return (typeof input == 'number' ) ? fact(input) : "Failed to Execute because of Wrongly Entered Input";
     
