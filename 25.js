@@ -6,11 +6,14 @@ myMonths= ["January", "February", "March", "April", "May", "June", "July", "Augu
 console.log(d.toString())
 console.log("Today is " + d.getDate() + " " + myMonths[d.getMonth()] + " " + d.getFullYear()+ ". \
 Its " +d.getHours() + " Hours " + d.getMinutes() + " minutes " + "and " + d.getSeconds() + " seconds now")
-//using the inbuilt date set and get methods to obtain the rquired dates.
 
-//Conclusion
-// 2019-02-26T10:51:33.398Z  <= Default UTC date and time
+
+// Conclusion
+// Output:
+// Default UTC date and time:
+// 2019-02-26T10:51:33.398Z  
 // Today is 26 February 2019. Its 16 Hours 21 minutes and 33 seconds now
 
-// Tue Feb 26 2019 16:19:49 GMT+0530 (IST)  <= After converting UTC to GMT+0539 or Browser's Local Time
+// After converting UTC to GMT+0530 or Browser's Local Time:
+// Tue Feb 26 2019 16:19:49 GMT+0530 (IST)
 // Today is 26 February 2019. Its 16 Hours 19 minutes and 49 seconds now
