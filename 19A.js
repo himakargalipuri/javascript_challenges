@@ -4,18 +4,24 @@
 
 var arr = [ 
   {
-    'name' : 'AKHIL',
-    'age'  : 22
+    'name' : 'RAJ',
+    'age'  : 28
   },
   {
-    'name' : 'RAJ',
+    'name' : 'AKHIL',
     'age'  : 24
   },
   {
     'name' : 'BELDARI',
-    'age'  : 28
+    'age'  : 22
+  },
+  {
+    'name' : 'None',
+    'age'  : 5
   }
 ];
+
+var arr = arr.sort( (a,b) => {return a.age - b.age} );
 //Tried with different inputs like  {"Akhil" : 123},123,"AKhil",["akhi",123],true...
 
 //This function is to retrieve the names from the array object...
@@ -24,15 +30,13 @@ const namesObj = (arr) =>{
 var names = [];
 var len = arr.length;
 
-for(var i=0; i<len; i++)
+for(var i=0; i<len; i++){
 if(i < len-1)
-names += arr[i].name + ",";
+names.push(arr[i].name);
 else
-names += arr[i].name;
-
-var names = names.split(",").sort();
+names.push(arr[i].name);
+}
 return names;
-
 }
 
 const namesObject = (arr) => {
@@ -42,11 +46,10 @@ return ( (Array.isArray(arr)) ? namesObj(arr) : "Failed to Execute because of Wr
 //Calling the function here
 var res = namesObject(arr) ;
 
-console.log("The list of names in the given array object are " );
-for(var x in res)
-  console.log(res);
+console.log("The list of names in the given array object sorted by ages are " );
+console.log(res);
 
-//Expected output when the Given array object is The list of names in the given array object are AKHIL,BELDARI,RAJ.
+//Expected output when the Given array object is The list of names in the given array object sorted by ages are ["None", "BELDARI", "AKHIL", "RAJ"]
 
 //Expected output when the Given input is 123 The list of names in the given array object are Failed to Execute because of Wrongly Entered Input
 
