@@ -13,12 +13,12 @@ if(!(arr instanceof Array) || arr == "") {  //checking if array or not
   }
 
     //conclusion: 
-    // Checked with [{"name": "john", "age":20},{"name":"ram", "age":25}, {"name":"ap", "age":18}], 
-    //  [1,2,3,4,5],  "1,2,3,4,5", {"a": 1, "b": 2};, true/false
+    //    Checked with [{"name": "john", "age":20},{"name":"ram", "age":25}, {"name":"ap", "age":18}], 
+    //      [1,2,3,4,5],  "1,2,3,4,5", {"a": 1, "b": 2};, true/false
     
-    //Input: [{"name": "john", "age":20}, {"name":"ram", "age":25}, {"name":"ap", "age":18}] 
-    //  => Output: [ 'ram', 'john', 'ap' ]
-    //Input: arr = [1,2,3,4,5]  
-    //  => Output: Please enter an array of objects
-    //Input: other than array  
-    //  => Output: Expected Number, Got something else
+    //    Input: [{"name": "john", "age":20}, {"name":"ram", "age":25}, {"name":"ap", "age":18}] 
+    //      => Output: [ 'ram', 'john', 'ap' ]
+    //    Input: arr = [1,2,3,4,5]  
+    //      => Output: Please enter an array of objects
+    //    Input: other than array  
+    //      => Output: Expected Number, Got something else

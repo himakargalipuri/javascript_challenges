@@ -18,5 +18,5 @@ if(!(typeof num == 'number') || num==""){  //checking if number is valid or not
   //Input: 1234567890     => Output: +1 (123) 456-7890
   //Input: 0123456789     => Output: Please enter excatly 10 digits and Make sure that the starting digit is not 0
   //Input: 01234568923    => Output: Please enter excatly 10 digits and Make sure that the starting digit is not 0
-  //Input: other than number   => Outpt: Expected Number, Got something else
+  //Input: other than number   => Output: Expected Number, Got something else
   
