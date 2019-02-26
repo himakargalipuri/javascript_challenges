@@ -1,5 +1,4 @@
 //17. Validate if given input is array
-
 var arr = [1,2,3] 
 console.log(((x) => {
     return (x instanceof Array) ? "It is Array" : "Not an array"
