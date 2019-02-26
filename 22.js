@@ -7,4 +7,4 @@
     console.log(flipcoin())
 
   //conclusion: 
-  // Output: Head Heads Tails Tails Tails Heads Tails Heads Tails Tails Tails Heads and so on
+  // Output: Heads Heads Tails Tails Tails Heads Tails Heads Tails Tails Tails Heads and so on
