@@ -3,8 +3,8 @@
 //Send error number not provided
 //Accept only numbers less than 100 and greater than 0
 
-var n = -1;
-console.log(typeof n);
+var n = 6;
+
 const factorial=((x) =>{ return(x==0) ? 1 : x*factorial(x-1)});//Recursive function
 //inputs checking
 if(n ==""){
@@ -16,7 +16,8 @@ else if( n<0 || n>100){
   console.log("please enter number between 0 to 100");
 }
 else{
-  console.log(factorial(n));
+  var res=factorial(n);
+  console.log(res);
 }
 //conclusion
 //In this checked inputs are number,string,array,boolean.
