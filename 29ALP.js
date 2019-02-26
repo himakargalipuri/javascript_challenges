@@ -7,12 +7,12 @@ const capLtrIndex= (str) => {
   return ( (typeof str == 'string') ? capLtrIndx(str) : "Failed to Execute because of Wrongly Entered Input"); 
 };
 
-//Calling the Tax Amount Calculating Fucnction and the tax rate calculating function here
+//Calling the function here
 var res = capLtrIndex(str) ;
 
 console.log("The Indexes of the Capital Letters in the given string are " + res);
 
-//Thisfunction is to locate the Capital letters indexes...
+//This function is to locate the Capital letters indexes...
 function capLtrIndx(str)
 {
   
