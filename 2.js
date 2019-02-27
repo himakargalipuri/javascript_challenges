@@ -1,30 +1,40 @@
-//2. Nearest prime number of a given number (medium) 
+//2. Nearest prime number of a given number
 
-var num = 12, arr = [];
-arr = [2, 3, 5, 7, 11, 13, 7, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
-function findPrime(n){
-    var len=arr.length;
-    if(n<2)     //checking for negetive numbers
-        return `Nearest Prime is ${arr[0]}`;
-    for(let i =0; i<len; i++){
-        if(n==arr[i]){ return `${arr[i]} is Prime already`;}  //checking if it is prime already
-        if(n>arr[i] && n<arr[i+1]){   //checking between two prime numbers
-          if(n-arr[i] < arr[i+1]-n){ 
-            return `Nearest Prime is ${arr[i]}`;
-          }
-        return `Nearest Prime is ${arr[i+1]}`;
-        }
-    }
+var num = 12;
+const isPrime = (n) =>{
+  var c = 1, j;
+  for(j = 2; j <= Math.sqrt(n); j++){ //dividing number from 2 to sqrt(n)
+    if(n%j == 0){c++}
+  }
+  if(c==1){return n}
 }
+
+const primeNearest = (num) => {
+    var l=0,h=0
+    if(num<2)     //checking for negetive numbers
+        return `Nearest Prime is 2`;
+
+    if(num  == isPrime(num)){
+      return `Nearest Prime is ${num}`
+    } else {
+      for(let i=num-1; i>1; i-- ){  //finding the lower prime number
+        l = isPrime(i)
+        break;
+      }
+      for(let k=num+1; k < +Infinity; k++ ){  //finding the higher prime number
+        h = isPrime(k)
+        break;
+      }
+      return ((num - l) < (h - num)) ? `Nearest Prime is ${l}`  :  `Nearest Prime is ${h}`
+      //comparing the distance between number and nearest prime number and returning the closest.
+  }
+}
+
 //checking various inputs
-if(num == ""){
-  console.log("Number not provided");
-}else if(!(typeof num == 'number')) {
-  console.log("Expected Number, Got something else");
-} else { 
-  console.log(findPrime(num));
+const  init = () => {
+  ((num == "") || !(typeof num == 'number')) ? (console.log("Expected Number, Got something else")) : console.log(primeNearest(num));
 }
-
+init();
 //conclusion: 
 // Checked with 12, "12", [12], true/false, ((x)=> x)(12);, {"a": 12} 
 
