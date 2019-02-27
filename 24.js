@@ -1,15 +1,17 @@
 //24. Is the given number symmetrical ?
 
 var num = 12321;
-if(num == "" || !(typeof num == 'number')){
-   console.log("Expected Number, Got something else.");
-} else { 
+const isSymmetric = (num) => { 
   var temp = num, str = "";
   str = num.toString().split("").reverse().join().replace(/,/g, "");
   //changing the number to String, then to array, then reverse then back to String and replacing , with ""
   console.log((temp == Number(str)) ? "Symmetrical" : "Not Symmetrical")
 }
 
+const init = () => {
+   (num == "" || !(typeof num == 'number')) ? console.log("Expected Number, Got something else.") : isSymmetric(num);
+}
+init()
     
 //conclusion: 
 // Checked with 12321, 1234, "12321", true/false,  {"a": 12321} 
