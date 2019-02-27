@@ -1,33 +1,34 @@
 //Replace vowels from a given string with corresponding numbers aeiou=12345 decoration=d2c4r1t34n
-//Expected input type : String.
+//Expected input type : String and a object of Keys and values.
 
 var str = "decoration";
+//In the below object you can mention the Keys with values u want to replace them in the given String. 
+var objct = {"a" : 1, "e" : 2, "i" : 3, "o" : 4, "u" : 5};
 //Tried with different inputs like 123,"decoration",{"Akhil" : 123},["akhi",123],true...
 
 //This function is to replace the vowels with coresponding numbers...
 const vowelRplc = str => {
   console.log("Given String is " + str);
   var str = str.split("");
-  var stng = [];
   var len = str.length;
 
   for (var i = 0; i < len; i++) {
-    if (str[i].match(/a/i)) {
-      str[i] = 1;
-      // stng[i].push(1);       // facing error when using push function here as "Cannot read property 'push' of undefined"
-    } else if (str[i].match(/e/i)) {
-      str[i] = 2;
-      // stng[i].push(2);       // facing error when using push function here as "Cannot read property 'push' of undefined"
-    } else if (str[i].match(/i/i)) {
-      str[i] = 3;
-      // stng[i].push(3);       // facing error when using push function here as "Cannot read property 'push' of undefined"
-    } else if (str[i].match(/o/i)) {
-      str[i] = 4;
-      // stng[i].push(4);       // facing error when using push function here as "Cannot read property 'push' of undefined"
-    } else if (str[i].match(/u/i)) {
-      str[i] = 5;
-      // stng[i].push(5);       // facing error when using push function here as "Cannot read property 'push' of undefined"
-    }
+      for(let key in objct){
+        if(str[i] == key)
+          str[i] = objct[key]
+      }
+  
+    // if (str[i].match(/a/i)) {
+    //   str[i] = 1;
+    // } else if (str[i].match(/e/i)) {
+    //   str[i] = 2;
+    // } else if (str[i].match(/i/i)) {
+    //   str[i] = 3;
+    // } else if (str[i].match(/o/i)) {
+    //   str[i] = 4;
+    // } else if (str[i].match(/u/i)) {
+    //   str[i] = 5;
+    // }
   }
   return str.join("");
 };
@@ -39,9 +40,7 @@ const VowelRplc = str => {
 //Calling the function here
 var res = VowelRplc(str);
 //Printing the result here
-console.log(
-  "String after replacing the vowels with respective numbers is " + res
-);
+console.log("String after replacing the vowels with respective numbers is " + res);
 
 //Expected output when the Given string decoration is String after replacing the vowels with respective numbers is d2c4r1t34n
 
