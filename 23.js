@@ -20,16 +20,17 @@ const myITSlabs = () => {
         ita = (30/100) * aSal; 
         itr = (ita * 100)/aSal
     }
+    console.log("Annual Salary: ", aSal +" INR");
     console.log("Income Tax Amount: ", ita +" INR");
     console.log("Income Tax Rate:   " + itr + "%");
 }
 
 //checking various inputs
-if(aSal == "" || !(typeof aSal == 'number')){
-   console.log("Expected Number, Got something else");
-  } else { 
-    myITSlabs();
-  }
+const init = () =>{
+    ((aSal == "") || !(typeof aSal == 'number')) ? console.log("Expected Number, Got something else") : myITSlabs();
+}
+
+init()
 
   //conclusion: 
   // Checked with -1200000, 150000, 300000, 700000, 1200000, "150000", [120000] true/false,  {"a": 5000, "b": 1200000, "c": 700000} 
