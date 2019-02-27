@@ -2,7 +2,7 @@
 // aziru = 12345 
 // decorationzebra = dec4r1t34n2ebr1
 
-var obj = {"a": 1, "z": 2, "i": 3, "o":4, "u":5};
+var obj = {"a": 1, "z": 2, "i": 3, "r":4, "u":5};
 var str = "decorationzebra"
   
 const  init = () => {
@@ -25,7 +25,7 @@ init();
      
 //Conclusion:   
 // pattern: aziru = 12345
-// Checked with "decorationzebra", 6478,  ["decorationzebra"], true/false,  {"d": "e", "c": "o", "r": "a"} 
+// Checked str with "decorationzebra", 6478,  ["decorationzebra"], true/false,  {"d": "e", "c": "o", "r": "a"} 
   
 //Input: "decorationzebra"    => Output: dec4r1t34n2ebr1
 //Input: other than String    => Output: Expected String as input, Got something else
