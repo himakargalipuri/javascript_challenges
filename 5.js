@@ -1,26 +1,24 @@
-var arr = [7, 2, 3, 6, 5, 9, 10,12, 1, 4, 8],len=arr.length ;
-var missN=0;
-function myValidation(){
-    text = "Array";
+// 5. Find missing value in an array of numbers 
+// Ex: [7, 2, 3, 6, 5, 10, 1, 4, 8] 
+var arr = [1,2,3,5], len=arr.length ;
+const missing = (arr) => {
     arr.sort((a,b) => (a-b));
     for(let i=0; i<len; i++){
-        if(arr[i+1]-arr[i]==2){
-            missN=arr[i]+1;
-            console.log("Missing number is " + missN)
+        if(arr[i+1] - arr[i] == 2){
+            console.log("Missing number is " + (arr[i]+1))
         } 
     }
 }
 
-//checking valid input
-if(!(arr instanceof Array) || arr == ""){
-    console.log("Expected Array, Got something else");
-} else {
-    myValidation();
+const  init = () => {
+  ((arr == "") || !(arr instanceof Array)) ? console.log("Expected array, Got something else") : missing(arr);
+  //checking the input value
 }
+init();
         
   //conclusion: 
-  // Checked with [1,2,3,5], "1,2,3,5", true/false,  {"a": 5, "b": 6, "c": 8} 
+  // Checked with [1,2,3,5], 1235, "1,2,3,5", true/false,  {"a": 5, "b": 6, "c": 8} 
   
   //Input: [1,2,3,5]               => Output: Missing number is 4
-  //Input: other than array        => Outpt: Expected Number, Got something else
+  //Input: other than array        => Output: Expected array, Got something else
   
