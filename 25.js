@@ -3,11 +3,13 @@
 
 var d = new Date(), myMonths=[];
 myMonths= ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-console.log(d.toString())
-console.log("Today is " + d.getDate() + " " + myMonths[d.getMonth()] + " " + d.getFullYear()+ ". \
-Its " +d.getHours() + " Hours " + d.getMinutes() + " minutes " + "and " + d.getSeconds() + " seconds now")
+const myDate = () => {
+  console.log(d.toString())
+  console.log("Today is " + d.getDate() + " " + myMonths[d.getMonth()] + " " + d.getFullYear()+ ". \
+  Its " +d.getHours() + " Hours " + d.getMinutes() + " minutes " + "and " + d.getSeconds() + " seconds now")
+}
 
-
+myDate()
 // Conclusion
 // Output:
 // Default UTC date and time:
