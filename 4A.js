@@ -1,4 +1,4 @@
-//Sort an array of strings based on
+//Sort an array of strings based on 
 //● Length
 //● Length of vowels (hard)
 //● Alphabetical
@@ -26,13 +26,13 @@ const sortByVowelsLen = (arr) => { //Facing Problem here to sort the given array
       for(var j = 0; j < arr[i].length; j++)
         {
           ch = arr[i].charAt(j);
-          console.log(arr[i]);
-          if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
-            {
+          // console.log(arr[i]);
+          if(ch.match(/[aeiou]/i))
+          {
               Vcount++;
-            }
+          }
         }
-      console.log("Length of the Vowels in " + (i+1) + "th string is " + Vcount);
+      console.log("Length of the Vowels in " + (arr[i]) + "th string is " + Vcount);
     }
   // console.log("Array sorted by Length of the Vowels in the string is " + arr2);
 }
@@ -53,7 +53,6 @@ const stngArray = (arr) => {
 
 //Calling the function here
 stngArray(arr) ;
-
 
 //Expected output when the Given Array with Strings is Array sorted by Length of the elements is asd,raj,akhil,avaScript,challenges 
 //Array sorted by Alphabetical order of the elements is akhil,asd,avaScript,challenges,raj
