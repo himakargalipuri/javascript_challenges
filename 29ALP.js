@@ -13,9 +13,9 @@ const capLtrIndx = (str) => {
   for(var i=0;i<len;i++)
     {
     if(str[i].match(/[A-Z]/))
-      indx += (i+1) + " ";
+      indx.push((i+1));
     }
-  return indx.split(" ");
+  return indx;
 }
 const capLtrIndex= (str) => {
   return ( (typeof str == 'string') ? capLtrIndx(str) : "Failed to Execute because of Wrongly Entered Input"); 
