@@ -7,10 +7,12 @@ var bre = 2;
 
 //This function is the class of square...
 class square {
+  //this method is for calculating the Square area
   static sqrA(len) {
     var sarea = len * len;
     return sarea;
   }
+  //this method is for calculating the Square Perimeter
   static sqrP(len) {
     var sperimeter = 4 * len;
     return sperimeter;
@@ -19,10 +21,12 @@ class square {
 
 //This function is the class of rectangle...
 class rectangle {
+  //this method is for calculating the rectangle area
   static rectA(len, bre) {
     var Area = len * bre;
     return Area;
   }
+  //this method is for calculating the rectangle Perimeter
   static rectP(len, bre) {
     var Perimeter = 2 * (len + bre);
     return Perimeter;
@@ -33,22 +37,8 @@ const Area = (len, bre) => {
   let rArea = rectangle.rectA(len, bre);
   let rPerimeter = rectangle.rectP(len, bre);
   //Printing the result here
-  console.log(
-    "Area of Rectangle with Length " +
-      len +
-      " and breadth " +
-      bre +
-      " is " +
-      rArea
-  );
-  console.log(
-    "Perimeter of Rectangle with Length " +
-      len +
-      " and breadth " +
-      bre +
-      " is " +
-      rPerimeter
-  );
+  console.log("Area of Rectangle with Length " + len + " and breadth " + bre + " is " + rArea);
+  console.log("Perimeter of Rectangle with Length " + len + " and breadth " + bre + " is " + rPerimeter);
 
   let sarea = square.sqrA(len);
   let sperimeter = square.sqrP(len);
@@ -58,9 +48,7 @@ const Area = (len, bre) => {
 };
 
 const AreA = (len, bre) => {
-  return typeof len == "number" && typeof bre == "number"
-    ? Area(len, bre)
-    : console.log("Failed to Execute because of Wrongly Entered Input");
+  return typeof len == "number" && typeof bre == "number" ? Area(len, bre) : console.log("Failed to Execute because of Wrongly Entered Input");
 };
 
 //Calling the function here
