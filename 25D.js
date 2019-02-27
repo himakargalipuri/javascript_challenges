@@ -16,7 +16,7 @@ const currentDate = () => {
  }
 
 const PrntDate = () => {
-  return (true)  ? currentDate() : "Failed to Execute because of Wrongly Entered Input";
+  return (true)  ? currentDate() : console.log("Failed to Execute because of Wrongly Entered Input");
  };
   
 PrntDate();
