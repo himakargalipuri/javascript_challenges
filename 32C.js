@@ -33,12 +33,12 @@ const arithmetic = (m,n) => {
   console.log("Exponential of given numbers " + m + "," + n + " is " + exp);
 }
 
-const rev= (str) => {
-  return ( (typeof str == 'string') ? reverse(str) : console.log("Failed to Execute because of Wrongly Entered Input") ); 
+const Arithmetic= (str) => {
+  return ( (typeof m == 'number') && (typeof n == 'number') ? arithmetic(m,n) : console.log("Failed to Execute because of Wrongly Entered Input") ); 
 };
 
 //Calling the function here
-var res = arithmetic(m,n) ;
+Arithmetic(m,n) ;
 
 //Expected output when the Given input 2,5 is "Addition of given numbers 2,5 is 7" "Multiplication of given numbers 2,5 is 10" "Exponential of given numbers 2,5 is 32".
 
