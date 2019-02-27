@@ -4,21 +4,24 @@
 
 var arr = ["a","b","c","a","d","c","d","c"], myObj = {};
 
-const myValidation = (() => {
+const genObj = ((arr) => {
   arr.sort();
-  for (let i in arr) {myObj[arr[i]]  ?  myObj[arr[i]] = myObj[arr[i]] + 1  :  myObj[arr[i]] = 1;}
-  return myObj 
+  arr.map((x)=>{
+    myObj[x] ? myObj[x] = myObj[x] + 1 : myObj[x] = 1
+    
+  })
+  console.log(myObj)
 })
+
 //checking valid input
-if(!(arr instanceof Array) || arr == ""){  //checking if array or not
-  console.log("Expected Array, Got something else");
-} else {
-  console.log(myValidation());  //calling the function
+const  init = () => {
+  ((arr == "") || !(arr instanceof Array)) ? console.log("Expected array, Got something else") : genObj(arr);
 }
+init();
         
   //conclusion: 
-  // Checked with ["a","b","c","a","d","c","d","c"], "abcadcdc", true/false,  {"a": 5, "b": 6, "c": 8, "a": 6, "d": 5,"c": 8} 
+  // Checked with ["a","b","c","a","d","c","d","c"], 123452134, "abcadcdc", true/false,  {"a": 5, "b": 6, "c": 8, "a": 6, "d": 5,"c": 8} 
   
   //Input: ["a","b","c","a","d","c","d","c"]   => Output: { a: 2, b: 1, c: 3, d: 2 }
-  //Input: other than array                    => Outpt: Expected Number, Got something else
+  //Input: other than array                    => Output: Expected array, Got something else
   
