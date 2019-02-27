@@ -13,7 +13,6 @@ const sum = (arr) => {
       sum += arr[i];
     }
   return sum;
-  console.log("Sum of the number in array " + arr + " is " + sum)  
 }
 
 const sumN = (arr) => {
