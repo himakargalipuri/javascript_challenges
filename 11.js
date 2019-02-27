@@ -2,7 +2,7 @@
 
 var arr = [2,5,3,5,2,3,1,4, "a", "ak", "b", "an"]
 
-//checking valid input
+
 const removeDup = (arr) => {
   console.log("After removal of Duplicate elements and Sorting: " + arr.filter((item, index) => (arr.indexOf(item)>=index)).sort());
   //using filter to go through each element and applying conditions
