@@ -9,10 +9,10 @@ const numLen = (num) =>{
   var temp = num;
   
   var count = 0;        
-        while(temp > 1)
+        while(temp > 0)
          {
            count++; 
-           temp = temp / 10;  
+           temp =  Math.round( temp/10);  
           }
   return count;
 }
@@ -28,7 +28,7 @@ var res = LenNum(num) ;
 console.log("Length of Given Number " + num +" is " + res);
  
 
-//Expected output when the Given number is Length of Given Number 123123123786786780 is 18
+//Expected output when the Given number is Length of Given Number 123123123786786786 is 18
 
 //Expected output when the Given input is 123 The Resulting String is Failed to Execute because of Wrongly Entered Input
 
