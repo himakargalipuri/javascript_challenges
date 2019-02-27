@@ -4,22 +4,30 @@
 
 var arr = [{"name": "john", "age": 20}, {"name": "ram", "age": 25}, {"name": "ap", "age": 18}] 
 
-if(!(arr instanceof Array) || arr == "") {  //checking if array or not
-    console.log("Expected Array, Got something else");
-  } else {
-    for (let i in arr){ //checking if array of objets or not
-        return (arr[i] instanceof Object) ? console.log((arr.sort((a,b) => (b.age - a.age))).map((x) => x.name)) : console.log(("Please enter an array of objects"));
-        // sorting by age and retrieving Segregated names using map
-    }
+const segNames = (arr) =>{
+  console.log((arr.sort((a,b) => (b.age - a.age))).map((x) => x.name)) 
+  // sorting by age and retrieving Segregated names using map
+}
+
+const checkObj = (arr)=> {
+  for (let i in arr){ //checking if array of objects or not
+    return (arr[i] instanceof Object) ? segNames(arr) : console.log(("Please enter an array of objects"));
   }
+}
+const  init = () => {
+  //checking the input value
+  ((arr == "") || !(arr instanceof Array)) ? console.log("Expected array, Got something else") : checkObj(arr);
+}
+
+init();
 
     //conclusion: 
     //    Checked with [{"name": "john", "age":20},{"name":"ram", "age":25}, {"name":"ap", "age":18}], 
-    //      [1,2,3,4,5],  "1,2,3,4,5", {"a": 1, "b": 2};, true/false
+    //      [1,2,3,4,5],  "1,2,3,4,5", {"a": 1, "b": 2};, true/false, 12345
     
     //    Input: [{"name": "john", "age":20}, {"name":"ram", "age":25}, {"name":"ap", "age":18}] 
     //      => Output: [ 'ram', 'john', 'ap' ]
     //    Input: arr = [1,2,3,4,5]  
     //      => Output: Please enter an array of objects
-    //    Input: other than array  
-    //      => Output: Expected Number, Got something else
+    //    Input: other than array of objects
+    //      => Output: Expected array, Got something else
