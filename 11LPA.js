@@ -1,4 +1,4 @@
-//Remove duplicates from array
+//Given an array of strings/numbers… sort and eliminate duplicates
 //Expected input type : Array of numbers or strings.
 
 var arr = ["asd", "asd", "a", "a", "s", 1, 2, 1, 3, 4];
