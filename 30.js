@@ -1,4 +1,4 @@
-// 30. split a given array/object by length/2 
+// 30. Split a given array/object by length/2 
 
 var arr = [2,7,3,1,0,2,8,4,4]
 var obj = { "a" : "1", "b" : "44", "c" : "4", "d" : "46", "e" : "84" };
