@@ -1,6 +1,6 @@
 // 13. Given an array of mixed value types. Return an array of their types 
-// [1,’adsf’, [a,b], {}, undefined, true] = [number, string, array, object, undefined, 
-// boolean] 
+// [1,’adsf’, [a,b], {}, undefined, true] = [number, string, array, object, undefined, boolean] 
+
 var arr = [1, "adsf", {}, undefined, ["a", "b"], true]
 
 
