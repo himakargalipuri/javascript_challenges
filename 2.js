@@ -39,7 +39,7 @@ init();
 // Checked with 12, "12", [12], true/false, ((x)=> x)(12);, {"a": 12} 
 
 //Input: 12 or ((x)=> x)(12) IIFE;       => Output: Nearest Prime is 13
-//Input: other than number               => Outpt: Expected Number, Got something else
+//Input: other than number               => Output: Expected Number, Got something else
 
 
     
