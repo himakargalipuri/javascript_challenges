@@ -5,12 +5,8 @@
 
 var arr = ["ram", "aeiou", "john", "hi", "aei", "ai"]
 
-function sortByAlphabetical(arr){
-  return arr.sort()
-}
-
 function sortByLength(arr){
-  return arr.sort((a,b) => (a.length-b.length));
+  return arr.sort((a,b) => (a.length - b.length));
 }
 
 function sortByVowel(arr){
@@ -18,10 +14,14 @@ function sortByVowel(arr){
   //matching every item of arr with aeiou and sorting
 }
 
+function sortByAlphabetical(arr){
+  return arr.sort()
+}
+
 const sortArray = (arr) => {
-  console.log(sortByAlphabetical(arr));
   console.log(sortByLength(arr));
   console.log(sortByVowel(arr));
+  console.log(sortByAlphabetical(arr));
 }
 
 const checkString = (arr)=> {
@@ -42,9 +42,9 @@ init();
   
 // Input: ["ram", "aeiou", "john", "hi", "aei", "ai"]      
 // => Output: 
-//  [ 'aei', 'aeiou', 'ai', 'hi', 'john', 'ram' ] 
-//  [ 'ai', 'hi', 'aei', 'ram', 'john', 'aeiou' ]
+//  [ 'hi', 'ai', 'ram', 'aei', 'john', 'aeiou' ]
 //  [ 'hi', 'ram', 'john', 'ai', 'aei', 'aeiou' ]
+//  [ 'aei', 'aeiou', 'ai', 'hi', 'john', 'ram' ]
 
 //Input: other than array   => Output: Expected Array, Got something else
 //Input: Array elements other than string =>Output: Please enter an array of Strings
