@@ -1,17 +1,17 @@
 //3.Find length of a given number without converting it to string
   
-  var n=123;
+ var n=123;
  var c=0;
  const  length=(n) => {
   while(n>1){ 
     n=n/10;
     c+=1;
   } console.log("length of the number is"  + " " + c );//it gives the count
- }//The loop runs untill the number is less then 1 
- //checking different inputs
-  if(n==0)
+  }//The loop runs untill the number is less then 1 
+  //checking different inputs
+   if(n==0)
     console.log("length is 1");
-  else if(n=="")
+   else if(n=="")
     console.log("Enter input");
     else if(!(typeof n=='number'))
     console.log("Expected array.got something else");
