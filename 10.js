@@ -4,11 +4,6 @@
 
 var obj = {"a": 1, "z": 2, "i": 3, "r":4, "u":5};
 var str = "decorationzebra"
-  
-const  init = () => {
-  ((str == "") || !(typeof str == 'string')) ? console.log("Expected String as input, Got something else") : console.log(vowelReplace(str));
-  //checking the input value
-}
 
 const vowelReplace = (str) => {
   var arr = str.split("")
@@ -20,12 +15,19 @@ const vowelReplace = (str) => {
   return arr.join().replace(/,/g, "");
 }
 
+const  init = () => {
+  !(typeof str == 'string') ? console.log("Expected String as input, Got something else") : ((str == "") ? console.log("Please Enter a non-empty String") : console.log(vowelReplace(str)));
+  //checking the input value
+}
+
 init();
 
      
 //Conclusion:   
 // pattern: aziru = 12345
-// Checked str with "decorationzebra", 6478,  ["decorationzebra"], true/false,  {"d": "e", "c": "o", "r": "a"} 
+// Checked str with "decorationzebra", 6478, ["decorationzebra"], true/false, 
+//          {"d": "e", "c": "o", "r": "a"}, null, undefined, "", Infinity, -Infinity, NaN 
   
 //Input: "decorationzebra"    => Output: dec4r1t34n2ebr1
+//Input: ""                   => Output: Please Enter a non-empty String
 //Input: other than String    => Output: Expected String as input, Got something else
