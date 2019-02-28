@@ -21,6 +21,7 @@ init();
   
   // Checked with [1, "adsf", {}, undefined, ["a", "b"], true]], 1, "adsf", {}, undefined, ["a", "b"], true",  
   //      {"a": 1, "b": "asdf" "c": {}, "b": true, "a": undefined}, null, undefined, "", NaN, Infinity, -Infinity
+
   //Input: [1, "adsf", {}, undefined, ["a", "b"], true]]     => Output: [ 'number', 'string', 'object', 'undefined', 'array', 'boolean' ]
-  //Input: other than array        => Outpt: Expected array, Got something else
+  //Input: other than array                                  => Output: Expected array, Got something else
   
