@@ -28,21 +28,21 @@ const primeNearest = (fn) => {
     }
 }
 
-const check = (num) => {
-  ((isNaN(num)) || (num == Infinity) || (num == -Infinity)) ? console.log("Please enter other than NaN, +Infinity, -Infinity") : console.log(primeNearest(num));
+const check = (num) => {  //checking various number types
+  ((isNaN(num)) || (num == Infinity) || (num == -Infinity)) ? console.log("Please enter number other than NaN, +Infinity, -Infinity") : console.log(primeNearest(num));
 }
 //checking various inputs
 const  init = () => {
-  ((num == "") || !(typeof num == 'number')) ? console.log("Expected Number as input, Got something else") : check(num);
+  !(typeof num == 'number') ? console.log("Expected Number as input, Got something else") : check(num);
 }
 init();
 
 //conclusion: 
-// Checked with 10, "10", [12], true/false, ((x)=> x)(12);, {"a": 12} 
+// Checked with 10, "10", [12], true/false, ((x)=> x)(12);, {"a": 12}, null, undefined, "", Infinity, -Infinity, NaN
 
 //Input: 10 or ((x)=> x)(10) IIFE;       => Output: Nearest Prime is 11
 //Input: -10                             => Output: Nearest Prime is 2
-//Input: NaN or nfinity or -Infinity     => Output: Please enter other than NaN, +Infinity, -Infinity
+//Input: NaN or Infinity or -Infinity    => Output: Please enter number other than NaN, Infinity, -Infinity
 //Input: other than number               => Output: Expected Number as input, Got something else
 
 
