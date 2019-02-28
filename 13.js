@@ -10,7 +10,7 @@ const typeOf = (arr) => {
     }
   ))
 }
-const  init = () => {
+const init = () => {
   !(arr instanceof Array) ? console.log("Expected array, Got something else") : typeOf(arr);
   //checking the input value
 }
