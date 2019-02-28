@@ -6,7 +6,7 @@ myMonths= ["January", "February", "March", "April", "May", "June", "July", "Augu
 const myDate = () => {
   console.log(d.toString())
   console.log("Today is " + d.getDate() + " " + myMonths[d.getMonth()] + " " + d.getFullYear()+ ". \
-  Its " +d.getHours() + " Hours " + d.getMinutes() + " minutes " + "and " + d.getSeconds() + " seconds now")
+Its " +d.getHours() + " Hours " + d.getMinutes() + " minutes and " + d.getSeconds() + " seconds now")
 }
 
 myDate()
