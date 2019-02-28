@@ -6,20 +6,25 @@ var arr = Array.from(num.toString().split(""));    //converting the number to st
 const convert = (num) =>{
   console.log("+1 ("+ arr[0]+arr[1]+arr[2] +") " + arr[3]+arr[4]+arr[5] +  "-" + arr[6]+arr[7]+arr[8]+arr[9])
 }
-//checking valid input
-if(!(typeof num == 'number') || num==""){  //checking if number is valid or not
-  console.log("Expected Number, Got something else");
-} else if((num >=10000000000) || num <= 999999999){       //checking between the range
-    console.log("Please enter excatly 10 digits and Make sure that the starting digit is not 0");
-} else {
-  convert(num)
+
+const check = (num) => {  //checking various number types
+  ((isNaN(num)) || (num == Infinity) || (num == -Infinity)) ? 
+      console.log("Please enter number other than NaN, +Infinity, -Infinity") :
+      (num >=10000000000 || num <= 999999999 ? console.log("Please enter excatly 10 digits and Make sure that the starting digit is not 0") : convert(num));    
 }
 
+//checking various inputs
+const  init = () => {
+  !(typeof num == 'number') ? console.log("Expected Number as input, Got something else") : check(num);
+}
+init();
+
   //conclusion: 
-  // Checked with 1234567890, 0123456789, 123456789, "123456890",  ]123456890], true/false,  {"a": 1, "b": 2, "c":3, "b": 4, "a": 5,"c": 6} 
+  // Checked with 1234567890, 0123456789, 123456789, "123456890",  [123456890], true/false,  {"a": 1, "b": 2, "c":3, "b": 4, "a": 5,"c": 6}, null, undefined, "", NaN, Infinity, -Infinity 
   
   //Input: 1234567890     => Output: +1 (123) 456-7890
   //Input: 0123456789     => Output: Please enter excatly 10 digits and Make sure that the starting digit is not 0
   //Input: 01234568923    => Output: Please enter excatly 10 digits and Make sure that the starting digit is not 0
+  //Input: NaN or Infinity or -Infinity       => Output: Please enter number other than NaN, Infinity, -Infinity
   //Input: other than number   => Output: Expected Number, Got something else
   
