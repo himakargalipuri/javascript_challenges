@@ -15,19 +15,21 @@ const toAltUpper = (str) => {
       }
     }
   }
-  console.log(arr.join().replace(/,/g,""))
+  console.log(arr.join().replace(/,/g, ""))
 }
 
 const  init = () => {
-  ((str == "") || !(typeof str == 'string')) ? console.log("Expected string, Got something else") : toAltUpper(str);
+  !(typeof str == 'string') ? console.log("Expected String, Got something else") : ((str == "") ? console.log("Please Enter a non-empty String") : toAltUpper(str));
   //checking the input value
 }
 init();
 
         
   //conclusion: 
-  // Checked with ""Hello world!", ["welcome", "abort"], true, 1234  {"ahello: 1, "world": "asdf", "c": true, "ak": undefined} 
+  // Checked with "Hello world!", ["welcome", "abort"], true, 1234, 
+  //   {"ahello: 1, "world": "asdf", "c": true, "ak": undefined}, null, undefined, "", NaN, Infinity, -Infinity 
   
   //Input: "Hello world!"       => Output: HElLo WoRlD!
-  //Input: other than string    => Outpt: Expected string, Got something else
+  //Input: ""                   => Output: Please Enter a non-empty String
+  //Input: other than string    => Outupt: Expected string, Got something else
   
