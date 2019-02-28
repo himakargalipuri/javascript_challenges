@@ -16,7 +16,6 @@ const  init = () => {
 }
 init();
 
-        
   //conclusion: 
   //When returning the typeof [a,b] it give output as 'object' because Arrays in JavaScript are special case of objects (numbered index objects)
   
