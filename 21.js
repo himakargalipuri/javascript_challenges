@@ -28,6 +28,6 @@ init();
   //conclusion: 
   // Checked with ""Hello world!", ["welcome", "abort"], true, 1234  {"ahello: 1, "world": "asdf", "c": true, "ak": undefined} 
   
-  //Input: "Hello world!"       => Output: WElCoMe To JaVaScRiPt!
+  //Input: "Hello world!"       => Output: HElLo WoRlD!
   //Input: other than string    => Outpt: Expected string, Got something else
   
