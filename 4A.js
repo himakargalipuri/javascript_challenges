@@ -5,7 +5,7 @@
 
 //Expected input type : Array with Strings in it.
 
-var arr = ["akhilee","asp","raji","ceehalleinges","javaScript"];
+var arr = ["akhilee","sp","raji","ceehalleinges","javaScript"];
 //Tried with different inputs like  123,{"Akhil" : 123},["akhi","Akhilraj"],true...
 
 //This function is to make every 4th char as 4 the given string...
