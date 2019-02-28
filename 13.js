@@ -20,7 +20,7 @@ init();
   //When returning the typeof [a,b] it give output as 'object' because Arrays in JavaScript are special case of objects (numbered index objects)
   
   // Checked with [1, "adsf", {}, undefined, ["a", "b"], true]], 1, "adsf", {}, undefined, ["a", "b"], true",  
-  //      {"a": 1, "b": "asdf" "c": {}, "b": true, "a": undefined}, null, undefined, "", NaN 
+  //      {"a": 1, "b": "asdf" "c": {}, "b": true, "a": undefined}, null, undefined, "", NaN, Infinity, -Infinity
   //Input: [1, "adsf", {}, undefined, ["a", "b"], true]]     => Output: [ 'number', 'string', 'object', 'undefined', 'array', 'boolean' ]
   //Input: other than array        => Outpt: Expected array, Got something else
   
