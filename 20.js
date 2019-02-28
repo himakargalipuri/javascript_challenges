@@ -10,16 +10,21 @@ const isPrime = (n) => {
     return (c==1) ? n + " is a Prime Number" : n + " is not a Prime Number"
 }
 
-//checking various input types
-const  init = () => {
-  ((num == "") || !(typeof num == 'number')) ? (console.log("Expected Number as input, Got something else")) : console.log(isPrime(num));
+const check = (num) => {    //checking various inputs types
+  ((isNaN(num)) || (num == Infinity) || (num == -Infinity)) ? console.log("Please enter number other than NaN, +Infinity, -Infinity") : console.log(isPrime(num));
 }
 
+//checking various inputs
+const  init = () => {
+  !(typeof num == 'number') ? console.log("Expected Number as input, Got something else") : check(num);
+}
 init();
+
 //conclusion: 
-// Checked with 4, 5, -4, "5", [5], true/false, {"a": 5} 
+// Checked with 4, 5, -4, "5", [5], true/false, {"a": 5}, null, undefined, "", NaN, Infinity, -Infinity 
   
 //Input: 4;     => Output: 4 is not a Prime Number
 //Input: 5;     => Output: 5 is a Prime Number
 //Input: -4;    => Output: -4 is not a Prime Number
-//Input: other than number  => Outpt: Expected Number, Got something else
+//Input: NaN or Infinity or -Infinity   => Output: Please enter number other than NaN, +Infinity, -Infinity
+//Input: other than number              => Output: Expected Number as input, Got something else
