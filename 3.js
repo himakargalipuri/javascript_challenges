@@ -1,6 +1,6 @@
 // 3. Find length of a given number without converting it to string
 
-var num = 123;
+var num = -1123;
 function findLength(n){
     if(n<0){ n = n*(-1); }    //checking if the input number is negative
     if(n == 0){ return `Length is 1`; }
@@ -12,15 +12,21 @@ function findLength(n){
     return `Length is ${c}`;
   }
 
+const check = (num) => {
+  ((isNaN(num)) || (num == Infinity) || (num == -Infinity)) ? console.log("Please enter number other than NaN, +Infinity, -Infinity") : console.log(findLength(num));
+}
+
 //checking various inputs
 const  init = () => {
-  ((num == "") || !(typeof num == 'number')) ? (console.log("Expected Number, Got something else")) : console.log(findLength(num));
+  !(typeof num == 'number') ? console.log("Expected Number as input, Got something else") : check(num);
 }
 init();
           
   //conclusion: 
-  // Checked with 123, "123", [123], true/false, {"a": 123} 
+  // Checked with 123, -1234, "123", [123], true/false, {"a": 123}, null, undefined, "", Infinity, -Infinity, NaN
   
-  //Input: 123                      => Output: 3
-  //Input: other than number        => Output: Expected Number, Got something else
+  //Input: 123                            => Output: Length is 3
+  //Input: -1234                          => Output: Length is 4
+  //Input: NaN or Infinity or -Infinity   => Output: Please enter number other than NaN, +Infinity, -Infinity
+  //Input: other than number              => Output: Expected Number as input, Got something else
   
