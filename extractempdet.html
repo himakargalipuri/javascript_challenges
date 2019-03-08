@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    th,td {
+      padding: 5px;
+    }
+
+    button {
+      background-color: aquamarine;
+      border: 1px solid grey;
+      border-radius: 6px;
+      font-size: 20px;
+      padding: 5px;
+      font-family: 'Times New Roman', Times, serif;
+      cursor: pointer;
+    }
+
+    input {
+      background-color: transparent;
+      border: 2px solid grey;
+      border-radius: 6px;
+      font-size: 20px;
+      padding: 5px;
+      font-family: 'Times New Roman', Times, serif;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+<form name="emp" id="emp">
+  <h3> To get ALL employees details...</h3>
+  <button type="button" onclick="showAllDet()">Click Here</button>
+  <br><br>
+
+  <h3> To get First 100 employees details whos age is 23 Years...</h3>
+  <button type="button" onclick="showEmpDet()">Click Here</button>
+  <br><br>
+
+  <h3> To get Frequency of ages in the data...</h3>
+  <button type="button" onclick="showFreq()">Click Here</button>
+  <br><br>
+
+  <h3> Enter age to display details of the employees whos age is below the given input age...</h3>
+  <input type="text" name="txt" id="txt" placeholder="Enter some age here ..."><br><br>
+  <button type="button" onclick="showFullDet()">Click Here</button>
+  <br><br>
+  
+  <p id="hdng"> </p>
+  
+  <p id="details"> </p>
+
+  <p id="demo"> </p>
+  
+  <!-- <table id="tble"></table> -->
+</form>
+  <script src="empdet.js" type="text/javascript">
+
+  </script>
+
+</body>
+
+</html>
